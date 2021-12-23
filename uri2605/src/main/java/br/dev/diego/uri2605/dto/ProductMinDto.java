@@ -4,29 +4,28 @@ import br.dev.diego.uri2605.projection.ProductMinProjection;
 
 public class ProductMinDto {
 
-    private String name;
+    private String productName;
     private String providerName;
 
     public ProductMinDto(){
     }
 
-    public ProductMinDto(String name, String providerName){
-        this.name = name;
+    public ProductMinDto(String productName, String providerName){
+        this.productName = productName;
         this.providerName = providerName;
     }
 
     public ProductMinDto(ProductMinProjection projection){
-        name = projection.getName();
-        providerName = projection.getProvider();
+        productName = projection.getProductName();
+        providerName = projection.getProviderName();
     }
 
-
-    public String getName(){
-        return name;
+    public String getProductName(){
+        return productName;
     }
 
-    public void setName(String name){
-        this.name = name;
+    public void setProductName(String productName){
+        this.productName = productName;
     }
 
     public String getProviderName(){
@@ -39,6 +38,6 @@ public class ProductMinDto {
 
     @Override
     public String toString(){
-        return "ProductMinDto{" + "name='" + name + '\'' + ", providerName='" + providerName + '\'' + '}';
+        return "ProductMinDto{" + "productName='" + productName + '\'' + ", providerName='" + providerName + '\'' + '}';
     }
 }

@@ -26,7 +26,12 @@ public class Uri2605Application implements CommandLineRunner {
 
 		List<ProductMinProjection> list = repository.search(6L);
 		List<ProductMinDto> listDto = list.stream().map(projection -> new ProductMinDto(projection)).collect(Collectors.toList());
-
+		System.out.println("CONSULTA NATIVA");
 		listDto.forEach(System.out::println);
+
+		List<ProductMinDto> listDto2 = repository.search1(6L);
+		System.out.println("CONSULTA JPQL");
+		listDto2.forEach(System.out::println);
+
 	}
 }
