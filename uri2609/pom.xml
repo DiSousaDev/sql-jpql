@@ -12,7 +12,7 @@
 	<artifactId>uri2609</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>uri2609</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Projeto para estudo de consultas com jpql</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
